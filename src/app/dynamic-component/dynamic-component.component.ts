@@ -7,15 +7,21 @@ import { MobileComponent } from './mobile/mobile.component';
   styleUrls: ['./dynamic-component.component.css']
 })
 export class DynamicComponentComponent implements OnInit {
-  @ViewChild('container',{read:ViewContainerRef,static:true}) container!:ViewContainerRef;
-
+  @ViewChild('container', { read: ViewContainerRef, static: true }) container!: ViewContainerRef;
+  productNames: any = {
+    mobile: 'mobile',
+    laptop: 'laptop',
+    watch: 'watch',
+    burger: 'burger',
+    ovan: 'ovan'
+  }
   constructor() { }
 
   ngOnInit(): void {
 
   }
-createCompoenent(){
-  this.container.clear();
-  this.container.createComponent(MobileComponent)
-}
+  createCompoenent(componentName:string ) {
+    this.container.clear();
+    this.container.createComponent(MobileComponent)
+  }
 }
