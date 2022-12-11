@@ -1,0 +1,15 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+}
+ul{
+    margin: 0px;
+    list-style: none;
+    padding: 0px;
+}
+li{
+    margin: 0px;
+    padding: 0px;
+}
